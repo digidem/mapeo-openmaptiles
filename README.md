@@ -1,5 +1,7 @@
 ## OpenMapTiles [![Build Status](https://travis-ci.org/openmaptiles/openmaptiles.svg?branch=master)](https://travis-ci.org/openmaptiles/openmaptiles)
 
+This is a fork of [OpenMapTiles](https://travis-ci.org/openmaptiles/openmaptiles) designed for [mapeo-mobile](https://github.com/digidem/mapeo-mobile). We have removed as many layers as possible to keep disk-size down for a global tileset that can be stored locally for offline map viewing.
+
 OpenMapTiles is an extensible and open vector tile schema for a OpenStreetMap basemap. It is used to generate vector tiles for [openmaptiles.org](http://openmaptiles.org/) and [openmaptiles.com](http://openmaptiles.com/).
 
 We encourage you to collaborate, reuse and adapt existing layers and add your own layers or use our approach for your own vector tile project. The repository is built on top of the [openmaptiles/tools](https://github.com/openmaptiles/openmaptiles-tools) to simplify vector tile creation.
