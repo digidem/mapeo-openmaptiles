@@ -20,7 +20,7 @@ BEGIN
   ;
 
   WITH important_country_point AS (
-      SELECT osm.geometry, osm.osm_id, osm.name, COALESCE(NULLIF(osm.name_en, ''), ne.name) AS name_en, ne.scalerank, ne.labelrank
+      SELECT osm.geometry, osm.osm_id, osm.name, ne.scalerank, ne.labelrank
       FROM ne_10m_admin_0_countries AS ne, osm_country_point AS osm
       WHERE
         -- We match only countries with ISO codes to eliminate disputed countries

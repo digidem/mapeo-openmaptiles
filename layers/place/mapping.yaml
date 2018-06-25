@@ -2,14 +2,14 @@ name_field: &name
   name: name
   key: name
   type: string
-name_en_field: &name_en
-  name: name_en
-  key: name:en
-  type: string
-name_de_field: &name_de
-  name: name_de
-  key: name:de
-  type: string
+# name_en_field: &name_en
+#   name: name_en
+#   key: name:en
+#   type: string
+# name_de_field: &name_de
+#   name: name_de
+#   key: name:de
+#   type: string
 rank_field: &rank
   name: rank
   key: rank
@@ -26,8 +26,8 @@ tables:
     - name: geometry
       type: geometry
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - name: tags
       type: hstore_tags
     filters:
@@ -46,8 +46,8 @@ tables:
     - name: geometry
       type: geometry
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - *rank
     - name: country_code_iso3166_1_alpha_2
       key: country_code_iso3166_1_alpha_2
@@ -80,8 +80,8 @@ tables:
     - name: webmerc_area
       type: webmerc_area
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - name: tags
       type: hstore_tags
     - *rank
@@ -101,8 +101,8 @@ tables:
     - name: geometry
       type: geometry
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - name: tags
       type: hstore_tags
     - *rank
@@ -122,8 +122,8 @@ tables:
     - name: geometry
       type: geometry
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - name: tags
       type: hstore_tags
     - name: is_in_country
@@ -152,8 +152,8 @@ tables:
     - name: geometry
       type: geometry
     - *name
-    - *name_en
-    - *name_de
+    # - *name_en
+    # - *name_de
     - name: tags
       type: hstore_tags
     - name: place
