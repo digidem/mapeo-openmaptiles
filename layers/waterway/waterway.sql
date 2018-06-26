@@ -83,10 +83,10 @@ RETURNS TABLE(geometry geometry, class text, name text, brunnel text, tags hstor
         -- etldoc: waterway_z4 ->  layer_waterway:z4_5
         SELECT * FROM waterway_z4 WHERE zoom_level BETWEEN 4 AND 5
         UNION ALL
-        -- etldoc: waterway_z6 ->  layer_waterway:z6_8
+        -- etldoc: waterway_z6 ->  layer_waterway:z6_7
         SELECT * FROM waterway_z6 WHERE zoom_level BETWEEN 6 AND 7
         UNION ALL
-        -- etldoc: waterway_z9 ->  layer_waterway:z9
+        -- etldoc: waterway_z8 ->  layer_waterway:z8_9
         SELECT * FROM waterway_z8 WHERE zoom_level BETWEEN 8 AND 9
         UNION ALL
         -- etldoc: waterway_z10 ->  layer_waterway:z10
