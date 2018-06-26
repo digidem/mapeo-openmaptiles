@@ -13,7 +13,7 @@ layer:
       - nature_reserve
   datasource:
     geometry_field: geometry
-    query: (SELECT geometry, class FROM layer_park(!bbox!, z(!scale_denominator!))) AS t
+    query: (SELECT geometry, name, class FROM layer_park(!bbox!, z(!scale_denominator!))) AS t
 schema:
   - ./layer.sql
 datasources:
