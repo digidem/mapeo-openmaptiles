@@ -3192,10 +3192,6 @@
         [
           "has",
           "name"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3227,10 +3223,6 @@
           "==",
           "$type",
           "LineString"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3267,10 +3259,6 @@
           "==",
           "class",
           "ocean"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3307,10 +3295,6 @@
           "!in",
           "class",
           "ocean"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3358,10 +3342,6 @@
           "city",
           "town",
           "village"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3406,10 +3386,6 @@
           "==",
           "class",
           "village"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3452,10 +3428,6 @@
           "==",
           "class",
           "town"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3503,10 +3475,6 @@
           "==",
           "class",
           "city"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3554,10 +3522,6 @@
           "==",
           "class",
           "city"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3612,10 +3576,6 @@
           ">=",
           "rank",
           3
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3664,10 +3624,6 @@
           "==",
           "rank",
           2
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3716,10 +3672,6 @@
           "==",
           "rank",
           1
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
@@ -3764,10 +3716,6 @@
           "==",
           "class",
           "continent"
-        ],
-        [
-          "!has",
-          "name:en"
         ]
       ],
       "layout": {
