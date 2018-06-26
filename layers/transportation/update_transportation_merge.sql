@@ -49,7 +49,7 @@ CREATE INDEX IF NOT EXISTS osm_transportation_merge_linestring_highway_partial_i
 
 -- etldoc: osm_transportation_merge_linestring -> osm_transportation_merge_linestring_gen3
 CREATE MATERIALIZED VIEW osm_transportation_merge_linestring_gen3 AS (
-    SELECT ST_Simplify(geometry, 120) AS geometry, osm_id, highway, z_order
+    SELECT ST_SimplifyVW(geometry, 100) AS geometry, osm_id, highway, z_order
     FROM osm_transportation_merge_linestring
     WHERE highway IN ('motorway','trunk', 'primary')
 );
