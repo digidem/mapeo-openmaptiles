@@ -4,6 +4,7 @@ layer:
       The park layer contains parks from OpenStreetMap tagged with either [`boundary=national_park`](http://wiki.openstreetmap.org/wiki/Tag:boundary%3Dnational_park) or [`leisure=nature_reserve`](http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dnature_reserve).
   buffer_size: 4
   fields:
+    name: The OSM [`name`](http://wiki.openstreetmap.org/wiki/Key:name) value of the park.
     class:
       description: |
           Use the **class** to differentiate between different parks.
