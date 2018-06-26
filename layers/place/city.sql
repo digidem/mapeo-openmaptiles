@@ -45,8 +45,8 @@ RETURNS TABLE(osm_id bigint, geometry geometry, name text, tags hstore, place ci
             OR (zoom_level >= 14)
           ))
     ) AS ranked_places
-    WHERE (zoom_level BETWEEN 7 AND 8 AND (gridrank <= 4 OR "rank" IS NOT NULL))
-       OR (zoom_level = 9 AND (gridrank <= 8 OR "rank" IS NOT NULL))
+    WHERE (zoom_level = 7 AND (gridrank <= 4 OR "rank" IS NOT NULL))
+       OR (zoom_level BETWEEN 8 AND 9 AND (gridrank <= 8 OR "rank" IS NOT NULL))
        OR (zoom_level = 10 AND (gridrank <= 12 OR "rank" IS NOT NULL))
        OR (zoom_level BETWEEN 11 AND 12 AND (gridrank <= 14 OR "rank" IS NOT NULL))
        OR (zoom_level >= 13);
