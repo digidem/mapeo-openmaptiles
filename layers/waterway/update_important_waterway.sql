@@ -53,7 +53,7 @@ CREATE INDEX IF NOT EXISTS osm_important_waterway_linestring_gen2_geometry_idx O
 CREATE MATERIALIZED VIEW osm_important_waterway_linestring_gen3 AS (
     SELECT ST_Simplify(geometry, 200) AS geometry, name, tags
     FROM osm_important_waterway_linestring_gen2
-    WHERE ST_Length(geometry) > 8000
+    WHERE ST_Length(geometry) > 4000
 );
 CREATE INDEX IF NOT EXISTS osm_important_waterway_linestring_gen3_geometry_idx ON osm_important_waterway_linestring_gen3 USING gist(geometry);
 
