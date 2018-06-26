@@ -145,10 +145,11 @@ RETURNS TABLE(geometry geometry, class text) AS $$
         SELECT * FROM water_z7 WHERE zoom_level = 7
         UNION ALL
         -- etldoc: water_z8 ->  layer_water:z8
-        SELECT * FROM water_z8 WHERE zoom_level = 8
-        UNION ALL
-        -- etldoc: water_z9 ->  layer_water:z9
-        SELECT * FROM water_z9 WHERE zoom_level = 9
+        -- etldoc: water_z8 ->  layer_water:z9
+        SELECT * FROM water_z8 WHERE zoom_level BETWEEN 8 AND 9
+        -- UNION ALL
+        -- -- etldoc: water_z9 ->  layer_water:z9
+        -- SELECT * FROM water_z9 WHERE zoom_level = 9
         UNION ALL
         -- etldoc: water_z10 ->  layer_water:z10
         SELECT * FROM water_z10 WHERE zoom_level = 10
