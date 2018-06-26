@@ -60,15 +60,15 @@ CREATE OR REPLACE VIEW water_z7 AS (
     -- SELECT geometry, water_class(waterway) AS class FROM osm_water_polygon_gen5
 );
 
-CREATE OR REPLACE VIEW water_z8 AS (
-    -- etldoc:  osm_ocean_polygon_gen4 ->  water_z8
-    SELECT geometry, 'ocean'::text AS class FROM osm_ocean_polygon_gen4
-    -- UNION ALL
-    -- -- etldoc:  osm_water_polygon_gen4 ->  water_z8
-    -- SELECT geometry, water_class(waterway) AS class FROM osm_water_polygon_gen4
-);
+-- CREATE OR REPLACE VIEW water_z8 AS (
+--     -- etldoc:  osm_ocean_polygon_gen4 ->  water_z8
+--     SELECT geometry, 'ocean'::text AS class FROM osm_ocean_polygon_gen4
+--     -- UNION ALL
+--     -- -- etldoc:  osm_water_polygon_gen4 ->  water_z8
+--     -- SELECT geometry, water_class(waterway) AS class FROM osm_water_polygon_gen4
+-- );
 
-CREATE OR REPLACE VIEW water_z9 AS (
+CREATE OR REPLACE VIEW water_z8 AS (
     -- etldoc:  osm_ocean_polygon_gen3 ->  water_z9
     SELECT geometry, 'ocean'::text AS class FROM osm_ocean_polygon_gen3
     UNION ALL

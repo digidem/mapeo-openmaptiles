@@ -27,8 +27,8 @@ CREATE OR REPLACE VIEW waterway_z6 AS (
     WHERE featurecla = 'River'
 );
 
--- etldoc: osm_important_waterway_linestring_gen3 ->  waterway_z9
-CREATE OR REPLACE VIEW waterway_z9 AS (
+-- etldoc: osm_important_waterway_linestring_gen3 ->  waterway_z8
+CREATE OR REPLACE VIEW waterway_z8 AS (
     SELECT geometry, 'river'::text AS class, name, tags, NULL::boolean AS is_bridge, NULL::boolean AS is_tunnel
     FROM osm_important_waterway_linestring_gen3
 );
@@ -84,10 +84,10 @@ RETURNS TABLE(geometry geometry, class text, name text, brunnel text, tags hstor
         SELECT * FROM waterway_z4 WHERE zoom_level BETWEEN 4 AND 5
         UNION ALL
         -- etldoc: waterway_z6 ->  layer_waterway:z6_8
-        SELECT * FROM waterway_z6 WHERE zoom_level BETWEEN 6 AND 8
+        SELECT * FROM waterway_z6 WHERE zoom_level BETWEEN 6 AND 7
         UNION ALL
         -- etldoc: waterway_z9 ->  layer_waterway:z9
-        SELECT * FROM waterway_z9 WHERE zoom_level = 9
+        SELECT * FROM waterway_z8 WHERE zoom_level BETWEEN 8 AND 9
         UNION ALL
         -- etldoc: waterway_z10 ->  layer_waterway:z10
         SELECT * FROM waterway_z10 WHERE zoom_level = 10
