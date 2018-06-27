@@ -1,23 +1,25 @@
 sudo: required
-
 dist: trusty
-
 language: bash
-
 services:
-  - docker
-  
+- docker
 before_install:
-  - sudo rm -f /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - sudo service docker restart
-  - docker-compose -v
-  - docker -v
- 
+- sudo rm -f /usr/local/bin/docker-compose
+- curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname
+  -s`-`uname -m` > docker-compose
+- chmod +x docker-compose
+- sudo mv docker-compose /usr/local/bin
+- sudo service docker restart
+- docker-compose -v
+- docker -v
 script:
-  - sudo service docker restart
-  - docker-compose config
-  - sudo ./quickstart.sh
-  
+- sudo service docker restart
+- docker-compose config
+- sudo ./quickstart.sh peru
+deploy:
+  provider: releases
+  api_key:
+    secure: IoI3tOAv/3RLU8OmZj/P9h/bo0z3dgwRY5OXekFQQjHVsnVCGti54qCdYFsmDJwuxY6D+WGi6UzwWZ9AIJFb7HM6Y5pCGPqqHZW0DZfzN/7xkxIRik3BHEH5zYVqXdvfDx3jIwYeMqnVrT/I9HRdz9GZYeYjJZnQx9q73Rt17WvcEAJVDOyFv204zFyZl8V7cEIKoXnxr8V4oDlsHZeWcU8lZCH6EGl10/WxOm0lalr/Rnrvd1AWqzHV5y6Rv1/uCFpumDkBNq7f/dYQwz5ay8vQIr4yYs3KacIXqXt5QbfFYcZdtW5rL/VXPjUTDbKGiNy4cu3sn2GnMhatS0hiTQg2ytS4MqH2twcGEu4l22gFflXn4iUw1i38rNySVzXqAcbhk2EwgpMxfwI4E2CmAV7lmaIQQMRa+1f/9ql7FB1Mj/y6Kgt+ZM9w3x1tXuBtWlfSIBMtwOpT5NCXD8S9lb68HoHVa9TMN+EKZCx+SZLFi/8RYuK7UJhNwr3TG+5QdEGkv7Ozam15HOfgGgv/+6DjVt1A0sYtkOMr+OSkvw1KTVtR87doZjSHftsgjSfjbvaBkEYX5GGDzk92zOjQimZGZ9jjuuIS+L2AIJ88Rq9bwv6geYTwng7oZd4HFKJErXSMNszsH/TuOsWqXKPxow8bDGfwaGsTOTzLAg7jGww=
+  file: data/tiles.mbtiles
+  on:
+    repo: digidem/mapeo-openmaptiles
