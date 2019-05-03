@@ -100,7 +100,7 @@ indoor INT) AS $$
             NULL::boolean AS is_ramp, NULL::int AS is_oneway,
             NULL::int AS layer, NULL::int AS level, NULL::boolean AS indoor,
             z_order
-        FROM osm_transportation_merge_linestring_gen3
+        FROM osm_transportation_merge_linestring_gen4
         WHERE zoom_level = 8
         UNION ALL
 
